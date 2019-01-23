@@ -1,19 +1,20 @@
-# APP NAME HERE
+# Water Wars
 
-APP DESCRIPTION HERE
+Play battleship.
 
 ## Authors
 
-- [STUDENT NAME HERE](http://link-to-website-here/)
-- [STUDENT NAME HERE](http://link-to-website-here/)
-- [STUDENT NAME HERE](http://link-to-website-here/)
+- [Ashton Cho](https://pwopup.github.io)
+- [Hansel John](https://tedwarsdodif.github.io)
+- [David Kou](https://toasthasfeelings.github.io)
+- [Naman Nair](https://ramen-21.github.io)
 
 ## Features
 
-- APP FEATURES HERE
+- Place Ships and drown others
 
 ### Changelog
 
 **Version 0.1**
 
-- CHANGES HERE
+- Absolutely Nothing
