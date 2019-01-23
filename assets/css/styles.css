@@ -1,0 +1,11 @@
+table, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+body {
+  background-image: url(../minecraft_water);
+}
