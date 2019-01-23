@@ -1,15 +1,28 @@
-table, td {
+body {
+  background-image: url(../../img/minecraft_water.jpg);
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-.numbers {
+
+table .hidden {
+  border: 0;
+}
+
+.numbers th {
   border: 3px solid black;
   border-collapse: collapse;
 }
+
 .letter {
   border: 3px solid black;
   border-collapse: collapse;
-}
-body {
-  background-image: url(../../img/minecraft_water.jpg);
 }
