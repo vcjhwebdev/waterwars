@@ -5,10 +5,10 @@ body {
 
 table {
   width: 100%;
-  max-width: 500px;
+  max-width: 425px;
   margin: 0 auto;
   vertical-align: middle;
-  height: 500px;
+  height: 425px;
 }
 
 td {
