@@ -1,5 +1,5 @@
-var board = document.querySelector('table');
-var rows = board.querySelectorAll('tr');
+var playerBoard = document.querySelector('#player');
+var rows = playerBoard.querySelectorAll('tr');
 
 function addClassNamesToTable() {
 
@@ -23,6 +23,9 @@ function addClassNamesToTable() {
 // Add class names to table
 addClassNamesToTable();
 
-board.addEventListener('click', function(e) {
-  console.log(e.target.className);
+playerBoard.addEventListener('click', function(e) {
+  if(e.target.className)
+  {
+    document.getElementsByClassName("A1").innerHTML = "X";
+  }
 });
