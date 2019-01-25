@@ -1,5 +1,6 @@
 body {
   background-image: url(../../img/minecraft_water.jpg);
+  font-family: 'Orbitron', sans-serif;
 }
 
 table {
@@ -26,4 +27,8 @@ table .hidden {
   border: 3px solid black;
   border-collapse: collapse;
   text-align: center;
+}
+p {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
 }
