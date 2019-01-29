@@ -24,6 +24,8 @@ function addClassNamesToTable() {
 addClassNamesToTable();
 
 playerBoard.addEventListener('click', function(e) {
+  if (e.target.className)
+  {
   e.target.innerHTML = "X";
-
+  }
 });
