@@ -1,5 +1,6 @@
 var playerBoard = document.querySelector('#player');
 var rows = playerBoard.querySelectorAll('tr');
+var ting = prompt("What Do u want Ur symbol to BE");
 
 function addClassNamesToTable() {
 
@@ -24,8 +25,9 @@ function addClassNamesToTable() {
 addClassNamesToTable();
 
 playerBoard.addEventListener('click', function(e) {
-  if (e.target.className)
+
+  if (e.target.innerHTML == " ")
   {
-  e.target.innerHTML = "X";
+  e.target.innerHTML = ting;
   }
 });
