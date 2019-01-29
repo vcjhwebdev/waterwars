@@ -1,6 +1,6 @@
 var playerBoard = document.querySelector('#player');
 var rows = playerBoard.querySelectorAll('tr');
-var ting = prompt("What Do u want Ur symbol to BE");
+var ting = prompt("What Do u want Ur symbol to BE Max 3 characters and More than 0");
 
 function addClassNamesToTable() {
 
@@ -31,3 +31,20 @@ playerBoard.addEventListener('click', function(e) {
   e.target.innerHTML = ting;
   }
 });
+
+function limitter()
+{
+  if (ting == null)
+  {
+    location.reload();
+  }
+  if (ting.length > 3)
+  {
+    location.reload();
+  }
+  if (ting.length <= 0)
+  {
+    location.reload();
+  }
+}
+limitter();
