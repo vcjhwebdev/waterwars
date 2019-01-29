@@ -19,12 +19,9 @@ td {
 table .hidden {
   border: 0;
 }
-
 .number th,
 .letter {
   padding: 15px;
-  /* width: 64px;
-  height: 64px; */
 }
 
 .number th {
@@ -40,8 +37,4 @@ table .hidden {
 p {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-}
-.A1 {
-  text-align: center;
-  color: white;
 }
