@@ -24,6 +24,7 @@ table .hidden {
 .number th,
 .letter {
   padding: 15px;
+  color: black;
 }
 
 .number th {
