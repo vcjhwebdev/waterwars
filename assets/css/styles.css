@@ -2,13 +2,13 @@ body {
   background-image: url(../../img/minecraft_water.jpg);
   font-family: 'Orbitron', sans-serif;
 }
-
 table {
   width: 100%;
   max-width: 425px;
   margin: 0 auto;
   vertical-align: middle;
   height: 425px;
+
 }
 
 td {
@@ -20,7 +20,14 @@ table .hidden {
   border: 0;
 }
 
-.numbers th {
+.number th,
+.letter {
+  padding: 15px;
+  /* width: 64px;
+  height: 64px; */
+}
+
+.number th {
   border: 3px solid black;
   border-collapse: collapse;
 }
@@ -33,4 +40,8 @@ table .hidden {
 p {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+}
+.A1 {
+  text-align: center;
+  color: white;
 }
