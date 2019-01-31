@@ -41,7 +41,15 @@ table .hidden {
 p {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+  position: fixed;
 }
 #twoLongBoat {
-  margin-left: 100px;
+  margin-left: 510px;
+}
+#player {
+  position: absolute;
+}
+#computer {
+  position: absolute;
+  margin-top: 600px;
 }
