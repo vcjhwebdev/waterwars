@@ -38,18 +38,29 @@ table .hidden {
   border-collapse: collapse;
   text-align: center;
 }
-p {
+p.humans {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  position: fixed;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: -25px;
+}
+p.aliens {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 730px;
 }
 #twoLongBoat {
-  margin-left: 510px;
+  margin-left: 250px;
 }
 #player {
   position: absolute;
+  margin-left: 250px;
 }
 #computer {
   position: absolute;
-  margin-top: 600px;
+  margin-top: 750px;
+  margin-left: 250px;
 }
