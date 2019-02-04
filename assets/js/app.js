@@ -61,9 +61,9 @@ playerBoard.addEventListener('click', function(e) {
 
   if (e.target.innerHTML == " " && numOfShips >=1)
   {
-    e.target.innerHTML = "Ship";
-    numOfShips -= 1;
-    e.target.id = "ship";
+    //e.target.innerHTML = '<i class="fas fa-align-justify"></i>';
+    //numOfShips -= 1;
+    //e.target.id = "ship";
 
   }
 console.log(e.target.id);
