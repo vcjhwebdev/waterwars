@@ -20,12 +20,17 @@ td {
 }
 .fa-align-justify {
   font-size: 45px;
-  color: lime;
+  color: white;
 }
 .hit {
   font-size: 45px;
   color: red;
 }
+.dead {
+  font-size: 45px;
+  color: grey;
+}
+
 table .hidden {
   border: 0;
 }
