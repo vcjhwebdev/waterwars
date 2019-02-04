@@ -2,7 +2,6 @@ var computerBoard = document.querySelector('#computer');
 var playerBoard = document.querySelector('#player');
 var rows = computerBoard.querySelectorAll('tr');
 var rows2 = computerBoard.querySelectorAll('tr');
-var ting = prompt("What Do u wa*nt Ur symbol to BE Max 3 characters and More than 0");
 var numOfShips = 5;
 
 function addClassNamesToTable() {
@@ -53,26 +52,10 @@ computerBoard.addEventListener('click', function(e) {
 
   if (e.target.innerHTML == " ")
   {
-  e.target.innerHTML = ting;
+  e.target.innerHTML = "O";
   }
 });
 
-function limitter()
-{
-  if (ting == null)
-  {
-    location.reload();
-  }
-  if (ting.length > 3)
-  {
-    location.reload();
-  }
-  if (ting.length <= 0)
-  {
-    location.reload();
-  }
-}
-limitter();
 
 playerBoard.addEventListener('click', function(e) {
 
