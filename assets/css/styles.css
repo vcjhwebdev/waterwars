@@ -18,7 +18,9 @@ td {
   text-align: center;
   color: white;
 }
-
+.fa-align-justify {
+  font-size: 45px;
+}
 table .hidden {
   border: 0;
 }
