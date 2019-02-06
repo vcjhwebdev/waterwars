@@ -30,6 +30,9 @@ td {
   font-size: 45px;
   color: grey;
 }
+.shot {
+  font-size: 30px;
+}
 
 table .hidden {
   border: 0;
