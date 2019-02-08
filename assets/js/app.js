@@ -2,7 +2,9 @@ var computerBoard = document.querySelector('#computer');
 var playerBoard = document.querySelector('#player');
 var rows = computerBoard.querySelectorAll('tr');
 var rows2 = computerBoard.querySelectorAll('tr');
-var numOfShips = 5;
+var numOfShips = 17;
+var randomThing = 5;
+var numberThing = 0;
 
 function addClassNamesToTable() {
 
@@ -47,24 +49,54 @@ function addClassNamesToPlayerTable() {
 
 // Add class names to table
 addClassNamesToPlayerTable();
-
+function randomShips()
+{
+  return Math.floor(Math.random() * 18)+1;
+}
 computerBoard.addEventListener('click', function(e) {
-
-  if (e.target.innerHTML == " ")
+if(numberThing >= 17)
+{
+if(randomThing >= 1)
+{
+  randomShips();
+  if(randomShips() == 1)
+  {
+    if(e.target.innerHTML == " ")
+    {
+      e.target.innerHTML = "X";
+      randomThing -= 1;
+    }
+  }
+  else
+  {
+    if(e.target.innerHTML == " ")
+    {
+    e.target.innerHTML = "O";
+    }
+  }
+}
+else if (randomThing <= 0)
+{
+  if(e.target.innerHTML == " ")
   {
   e.target.innerHTML = "O";
   }
+}
+}
+else {
+  alert("Place ur ships first");
+}
 });
-
 
 playerBoard.addEventListener('click', function(e) {
 
   if (e.target.innerHTML == " " && numOfShips >=1)
   {
-    //e.target.innerHTML = '<i class="fas fa-align-justify"></i>';
-    //numOfShips -= 1;
-    //e.target.id = "ship";
-
+    e.target.innerHTML = '<i class="fas fa-align-justify"></i>';
+    numOfShips -= 1;
+    e.target.id = "ship";
+    numberThing += 1;
   }
+
 console.log(e.target.id);
 });
