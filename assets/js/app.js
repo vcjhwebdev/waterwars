@@ -65,6 +65,7 @@ if(randomThing >= 1)
     {
       e.target.innerHTML = "X";
       randomThing -= 1;
+      e.target.className = "shot hit";
     }
   }
   else
@@ -81,6 +82,7 @@ else if (randomThing <= 0)
   {
   e.target.innerHTML = "O";
   }
+  alert("u win");
 }
 }
 else {
