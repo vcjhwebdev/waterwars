@@ -82,11 +82,11 @@ else if (randomThing <= 0)
   {
   e.target.innerHTML = "O";
   }
-  alert("u win");
+  alert("You win, do you want to try again?");
 }
 }
 else {
-  alert("Place ur ships first");
+  alert("Please place your ships first.");
 }
 });
 
