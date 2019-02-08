@@ -79,3 +79,9 @@ p.aliens {
   margin-top: 750px;
   margin-left: 250px;
 }
+button{
+  background-color: #4E5FFB;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+}
