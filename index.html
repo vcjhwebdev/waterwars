@@ -8,7 +8,17 @@
     <title>Water Wars</title>
   </head>
   <body>
-<button type="button" onclick="alert('Cancel Match')">Cancel Match</button>
+    <button type="button" onclick="cancelMatch()">Cancel Match</button>
+<script type="text/javascript">
+  function cancelMatch() {
+    var confirmCancel = confirm("Do you want to cancel the match?");
+    if(confirmCancel == true) {
+      location.reload();
+    } else {
+      console.log("didnt cancel");
+    }
+  }
+</script>
 <button value="Refresh Page" onClick="window.location.reload()">Replay Match</button>
 <h1><i class="fas fa-align-justify"></i> = Safe <i class="fas fa-align-justify hit"></i> = Hit <i class="fas fa-align-justify dead"></i> = Shot Down<h2>
   <p class ="humans"><strong>Humans</strong></p>
