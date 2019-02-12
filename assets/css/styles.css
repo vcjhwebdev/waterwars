@@ -84,17 +84,16 @@ p.aliens {
   margin-top: 730px;
   font-size: 25px;
 }
-#twoLongBoat {
-  margin-left: 250px;
-}
 #player {
   position: absolute;
   margin-left: 250px;
+  font-size: 24px;
 }
 #computer {
   position: absolute;
   margin-top: 750px;
   margin-left: 250px;
+  font-size: 24px;
 }
 button{
   background-color: #4E5FFB;
