@@ -33,7 +33,22 @@ td {
 .shot {
   font-size: 30px;
 }
-
+.shipsLeft {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 700px;
+  font-size: 20px;
+}
+.shipLength {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 700px;
+  font-size: 20px;
+}
 table .hidden {
   border: 0;
 }
@@ -59,6 +74,7 @@ p.humans {
   position: absolute;
   margin-left: 500px;
   margin-top: -25px;
+  font-size: 25px;
 }
 p.aliens {
   text-align: center;
@@ -66,6 +82,7 @@ p.aliens {
   position: absolute;
   margin-left: 500px;
   margin-top: 730px;
+  font-size: 25px;
 }
 #twoLongBoat {
   margin-left: 250px;
