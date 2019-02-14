@@ -5,11 +5,9 @@ body {
 }
 table {
   width: 100%;
-  max-width: 425px;
+  /* max-width: 425px; */
   margin: 0 auto;
-  vertical-align: middle;
-  height: 425px;
-
+  /* vertical-align: middle; */
 }
 
 td {
@@ -18,16 +16,20 @@ td {
   text-align: center;
   color: white;
 }
+
+.fa-align-justify,
+.hit,
+.dead, {
+  font-size: 20px;
+}
+
 .fa-align-justify {
-  font-size: 45px;
   color: white;
 }
 .hit {
-  font-size: 45px;
   color: red;
 }
 .dead {
-  font-size: 45px;
   color: grey;
 }
 .shot {
@@ -36,17 +38,11 @@ td {
 .shipsLeft {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  position: absolute;
-  margin-left: 300px;
-  margin-top: 700px;
   font-size: 20px;
 }
 .shipLength {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  position: absolute;
-  margin-left: 500px;
-  margin-top: 700px;
   font-size: 20px;
 }
 table .hidden {
@@ -54,7 +50,7 @@ table .hidden {
 }
 .number th,
 .letter {
-  padding: 15px;
+  /* padding: 15px; */
   color: black;
 }
 
@@ -71,29 +67,19 @@ table .hidden {
 p.humans {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  position: absolute;
-  margin-left: 500px;
-  margin-top: -25px;
   font-size: 25px;
 }
 p.aliens {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  position: absolute;
-  margin-left: 500px;
-  margin-top: 730px;
   font-size: 25px;
 }
+
 #player {
-  position: absolute;
-  margin-left: 250px;
-  font-size: 24px;
+  /* font-size: 24px; */
 }
 #computer {
-  position: absolute;
-  margin-top: 750px;
-  margin-left: 250px;
-  font-size: 24px;
+  /* font-size: 24px; */
 }
 button{
   background-color: #4E5FFB;
