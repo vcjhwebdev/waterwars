@@ -2,9 +2,19 @@ var computerBoard = document.querySelector('#computer');
 var playerBoard = document.querySelector('#player');
 var rows = computerBoard.querySelectorAll('tr');
 var rows2 = computerBoard.querySelectorAll('tr');
-var numOfShips = 17;
+var numOfShips = 5;
+var ships = [2, 3, 3, 4, 5];
 var randomThing = 5;
 var numberThing = 0;
+var boardThing = 100;
+
+
+function placeShips() {
+  while(ships.length !== 0) {
+    
+  }
+}
+
 
 function addClassNamesToTable() {
 
@@ -54,7 +64,8 @@ function randomShips()
   return Math.floor(Math.random() * 18)+1;
 }
 computerBoard.addEventListener('click', function(e) {
-if(numberThing >= 17)
+boardThing -= 1;
+if(numberThing >= 5)
 {
 if(randomThing >= 1)
 {
@@ -82,11 +93,27 @@ else if (randomThing <= 0)
   {
   e.target.innerHTML = "O";
   }
-  alert("You win, do you want to try again?");
+  var alertThing = confirm("You win, do you want to try again?");
+  if (alertThing == true)
+  {
+    location.reload();
+  }
+  else {
+    location.reload();
+  }
 }
 }
 else {
   alert("Please place your ships first.");
+}
+if(boardThing <= 5 && randomThing >=0)
+{
+    if(e.target.innerHTML == " ")
+    {
+      e.target.innerHTML = "X";
+      randomThing -= 1;
+      e.target.className = "shot hit";
+    }
 }
 });
 
