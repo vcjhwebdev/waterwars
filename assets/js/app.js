@@ -14,28 +14,49 @@ function hasPlacedAllShips() {
   }
 }
 
+
 // id="player-1-1"
 // id="player-1-2"
 
 function placeShips(e) {
-
-  function isValidStartPoint() {
+  var target = e.target;
+  function seperate(target)
+  {
+    return target.id.split('-');
+  }
+  var x = seperate(target)[1];
+  var y = seperate(target)[2];
+  console.log(x,y);
+  function isEmptySpace(target) {
+    if(target.innerHTML == " ") {
+      return true;
+    }
+    return false;
   }
 
-  function isValidEndPoint() {
+  function hasNoOpeningSurrounding(target) {
+
   }
 
-  if(ships.length > 0) {
-    console.log(e.target);
+  function isValidStartPoint(target) {
+    if(isEmptySpace(target)) {}
+  }
 
-    if (e.target.innerHTML == " ")
+  function isValidEndPoint(target) {
+  }
+
+  // if(ships.length > 0) {
+    console.log(target);
+
+    console.log(seperate(target));
+
+    // there's no ship there
+    if (isEmptySpace(target))
     {
-      e.target.innerHTML = '<i class="fas fa-align-justify"></i>';
+      target.innerHTML = '<i class="fas fa-align-justify"></i>';
       ships.pop();
     }
-
-
-  }
+  // }
 }
 
 function randomShips()
