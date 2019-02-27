@@ -99,8 +99,9 @@ Device width:
 ==================================== */
 @media (max-width: 320px) {
   table {
-    width: 90%;
+    width: 100%;
     height: 250px;
+    margin: 0;
   }
 
 }
