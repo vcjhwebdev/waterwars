@@ -23,8 +23,8 @@ td {
 }
 
 .fa-align-justify,
-.hit,
-.dead, {
+.dead,
+.hit {
   font-size: 20px;
 }
 
@@ -37,9 +37,7 @@ td {
 .dead {
   color: grey;
 }
-.shot {
-  font-size: 30px;
-}
+
 .shipsLeft {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
