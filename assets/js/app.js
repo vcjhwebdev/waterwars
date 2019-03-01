@@ -26,6 +26,8 @@ function placeShips(e) {
   }
   var x = seperate(target)[1];
   var y = seperate(target)[2];
+  var nextToX = x + 1;
+  var nextToY = y + 1;
   console.log(x,y);
   function isEmptySpace(target) {
     if(target.innerHTML == " ") {
@@ -39,10 +41,24 @@ function placeShips(e) {
   }
 
   function isValidStartPoint(target) {
-    if(isEmptySpace(target)) {}
+    if(isEmptySpace(target) && nextToX.innerHTML == " ")
+    {
+
+    }
+    return false;
   }
 
-  function isValidEndPoint(target) {
+  function isValidEndPoint(target)
+  {
+    if(target.innerHTML == " ")
+    {
+      return true;
+    }
+    //if()
+    //{
+
+    //}
+    return false;
   }
 
   // if(ships.length > 0) {
