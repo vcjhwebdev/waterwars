@@ -5,6 +5,7 @@ var rows2 = computerBoard.querySelectorAll('tr');
 var ships = [2, 3, 3, 4, 5];
 var randomThing = 5;
 var boardThing = 100;
+var numOfShips = ships.length;
 
 function hasPlacedAllShips() {
   if(ships.length === 0) {
@@ -24,11 +25,11 @@ function placeShips(e) {
   {
     return target.id.split('-');
   }
-  var x = seperate(target)[1];
-  var y = seperate(target)[2];
+  var x = Number(seperate(target)[1]);
+  var y = Number(seperate(target)[2]);
   var nextToX = x + 1;
   var nextToY = y + 1;
-  console.log(x,y);
+  console.log(nextToX,nextToY);
   function isEmptySpace(target) {
     if(target.innerHTML == " ") {
       return true;
@@ -136,3 +137,4 @@ if(boardThing <= 5 && randomThing >=0)
 playerBoard.addEventListener('click', function(e) {
   placeShips(e);
 });
+document.write("<h3 class='shipsLeft'>Ships Left: "+ numOfShips + "</h3>");
