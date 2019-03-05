@@ -13,6 +13,7 @@ table {
   /* max-width: 425px; */
   margin: 0 auto;
   /* vertical-align: middle; */
+  max-width: 1000px;
 }
 
 td {
@@ -103,7 +104,11 @@ Device width:
     height: 250px;
     margin:0;
   }
-
+  .fa-align-justify,
+  .dead,
+  .hit {
+    font-size: 15px;
+  }
 }
 /* =================================
 Device width:
@@ -114,6 +119,11 @@ Device width:
     width: 80%;
     height: 500px;
   }
+    .fa-align-justify,
+    .dead,
+    .hit {
+      font-size: 20px;
+    }
 }
 /* =================================
 Device width:
@@ -123,5 +133,10 @@ Device width:
   table {
     width: 60%;
     height: 500px;
+  }
+  .fa-align-justify,
+  .dead,
+  .hit {
+    font-size: 25px;
   }
 }
