@@ -10,6 +10,7 @@
   </head>
   <body>
     <button type="button" onclick="cancelMatch()">Cancel Match</button>
+    <button class="dayToNight" type="button" onclick="changeTime()">Change Time Of Day</button>
 <script type="text/javascript">
   function cancelMatch() {
     var confirmCancel = confirm("Do you want to cancel the match? Press OK to cancel");
@@ -18,6 +19,9 @@
     } else {
       console.log("didnt cancel");
     }
+  }
+  function changeTime() {
+    document.body.style.background.image = (../../img/rainingdiamonds.jpg);
   }
 </script>
 <p class ="humans"><strong>Humans</strong></p>
