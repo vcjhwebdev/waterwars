@@ -6,6 +6,9 @@ var ships = [2, 3, 3, 4, 5];
 var randomThing = 5;
 var boardThing = 100;
 var numOfShips = ships.length;
+var shipStart = false;
+var shipEnd = false;
+
 
 function hasPlacedAllShips() {
   if(ships.length === 0) {
@@ -20,31 +23,15 @@ function hasPlacedAllShips() {
 // id="player-1-2"
 
 function placeShips(e) {
-  var target = e.target;
+
   function seperate(target)
   {
     return target.id.split('-');
   }
-  var x = Number(seperate(target)[1]);
-  var y = Number(seperate(target)[2]);
-  var nextToX = x + 1;
-  var nextToY = y + 1;
-  console.log(nextToX,nextToY);
+
   function isEmptySpace(target) {
     if(target.innerHTML == " ") {
       return true;
-    }
-    return false;
-  }
-
-  function hasNoOpeningSurrounding(target) {
-
-  }
-
-  function isValidStartPoint(target) {
-    if(isEmptySpace(target) && nextToX.innerHTML == " ")
-    {
-
     }
     return false;
   }
@@ -62,19 +49,43 @@ function placeShips(e) {
     return false;
   }
 
-  // if(ships.length > 0) {
-    console.log(target);
+  var target = e.target;
 
-    console.log(seperate(target));
+  if(target.tagName == "TD") {
 
-    // there's no ship there
-    if (isEmptySpace(target))
-    {
-      target.innerHTML = '<i class="fas fa-align-justify"></i>';
-      ships.pop();
-    }
-  // }
-}
+ var x = seperate(target)[1];
+ var y = seperate(target)[2];
+ var checkX = 0;
+ var checkY = 0;
+
+      // if(ships.length > 0) {
+
+        if (isEmptySpace(target))
+        {
+
+          // place first coordinate
+          if (shipStart == false){
+            checkX = seperate(target)[1];
+            checkY = seperate(target)[2];
+            target.innerHTML = '<i class="fas fa-align-justify"></i>';
+            shipStart = true;
+
+          }
+          // place second coordinate
+          else {
+            console.log(checkX, checkY);
+            if (Number(checkX) + 2 == Number(y))
+            {
+              target.innerHTML = '<i class="fas fa-align-justify"></i>';
+              shipEnd = true;
+
+            }
+          }
+          }
+        }
+      // }
+
+  }
 
 function randomShips()
 {
@@ -138,3 +149,4 @@ playerBoard.addEventListener('click', function(e) {
   placeShips(e);
 });
 document.write("<h3 class='shipsLeft'>Ships Left: "+ numOfShips + "</h3>");
+document.write("<h3 class='shipLength'>Current Ship's Length: " + ships.pop() + "</h3>");
