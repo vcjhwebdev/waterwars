@@ -15,6 +15,6 @@ Play battleship.
 
 ### Changelog
 
-**Version 0.1**
+**Version 0.8**
 
-- Absolutely Nothing
+- did stuff
