@@ -12,7 +12,7 @@
     <div class="modal">
       <div class="modal-content">
         <h1>You won!</h1>
-        <button type="button" onclick="FUNCTION">Play Again</button>
+        <button type="playAgain" onclick="playAgain()">Play Again</button>
         <h1>STATISTICS</h1>
         <h2>Moves taken: MOVES TAKEN</h2>
       </div>
@@ -26,6 +26,9 @@
       location.reload();
     } else {
       console.log("didnt cancel");
+    }
+    function playAgain() {
+      location.reload();
     }
   }
 </script>
