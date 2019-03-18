@@ -23,6 +23,31 @@ td {
   color: white;
 }
 
+/* modal */
+.modal {
+  background-color: rgba(0, 75, 125, 0.8);
+  text-align: center;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-content {
+  border: 1px solid white;
+  background-color: rgba(0, 75, 125, 0);
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
 .fa-align-justify,
 .dead,
 .hit {
