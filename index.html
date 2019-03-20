@@ -9,15 +9,7 @@
     <title>Water Wars</title>
   </head>
   <body>
-    <div class="modal">
-      <div class="modal-content">
-        <h1>You won!</h1>
-        <button type="button" onclick="playAgain()">Play Again</button>
-        <h1>STATISTICS</h1>
-        <h2>Moves taken: MOVES TAKEN</h2>
-      </div>
-    </div>
-    <button type="button" onclick="cancelMatch()">Cancel Match</button>
+
 <script type="text/javascript">
 
   function cancelMatch() {
@@ -27,10 +19,10 @@
     } else {
       console.log("didnt cancel");
     }
-    function playAgain() {
-      location.reload();
-    }
   }
+  function reload() {
+  location.reload();
+}
 </script>
 <p class ="humans"><strong>Humans</strong></p>
 <h3 style="text-align:center;"><i class="fas fa-align-justify"></i> = Safe <i class="fas fa-align-justify hit"></i> = Hit <i class="fas fa-align-justify dead"></i> = Shot Down</h3>
@@ -335,3 +327,12 @@
     <script src="assets/js/app.js"></script>
   </body>
 </html>
+<div class="modal">
+  <div class="modal-content">
+    <h1>You won!</h1>
+    <button type="button" onclick="reload()">Play Again</button>
+    <h1>STATISTICS</h1>
+    <h2>Moves taken: MOVES TAKEN</h2>
+  </div>
+</div>
+<button type="button" onclick="cancelMatch()">Cancel Match</button>
