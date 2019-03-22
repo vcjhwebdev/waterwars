@@ -10,6 +10,7 @@ var numOfShips = ships.length;
 var shipStart = false;
 var shipEnd = false;
 var ting = 0;
+
 var placements = [
   [
     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -154,7 +155,7 @@ function placeModal(content)
     </div>`
   modal.innerHTML = modalContent;
   var body = document.querySelector('body');
-  body.insertBefore(modal, body.children[0]);  
+  body.insertBefore(modal, body.children[0]);
 }
 
 
@@ -236,5 +237,5 @@ playerBoard.addEventListener('click', function(e) {
   placeShips(e);
   ting +=1;
 });
-document.write("<h3 class='shipsLeft'>Ships Left: "+ numOfShips + "</h3>");
-document.write("<h3 class='shipLength'>Current Ship's Length: " + ships.pop() + "</h3>");
+var shipsLeft = document.querySelector('.shipsLeft');
+shipsLeft.textContent = "Ships Left: " + numOfShips;

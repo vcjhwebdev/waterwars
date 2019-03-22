@@ -15,6 +15,8 @@ Play battleship.
 
 ### Changelog
 
-**Version 0.8**
+**Version Beta 1.5**
 
-- did stuff
+- added templates for ship placements
+- added modal
+- removed ability to interact with enemy board
