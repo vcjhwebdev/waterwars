@@ -114,14 +114,10 @@ p.aliens {
   /* font-size: 24px; */
 }
 button{
-  background-color: #D4FFFF;
-  color: white;
   font-size: 20px;
   border-radius: 10px;
-  border-color: white;
-  background: rgba(212,255,255,0.5);
-  max-width: 200px;
-  
+  min-width: 500px;
+  margin: 0 auto;
 }
 .button.operator {
 	color: #57FBFF;
