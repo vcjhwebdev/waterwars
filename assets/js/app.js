@@ -140,7 +140,7 @@ function placeModal(content)
   var modalContent = `
     <div class="modal-content">
       <h1>${content}</h1>
-      <button class="operator" onclick="reload()">Play Again</button>
+      <button class="button operator" onclick="reload()">Play Again</button>
       <h1>STATISTICS</h1>
       <h2>Moves taken: MOVES TAKEN</h2>
     </div>`
