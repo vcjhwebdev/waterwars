@@ -15,7 +15,7 @@ Play battleship.
 
 ### Changelog
 
-**Version Beta 1.5**
+**Version 1.0**
 
 - added templates for ship placements
 - added modal
