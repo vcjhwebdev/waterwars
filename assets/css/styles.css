@@ -110,7 +110,7 @@ p.aliens {
 #player {
   /* font-size: 24px; */
 }
-#computer {
+#alien {
   /* font-size: 24px; */
 }
 button{
@@ -129,7 +129,9 @@ button{
 	border-bottom: 8px #34486E solid;
 	border-top: 4px #5D7EEE solid;
 }
-
+#computerShip {
+  visibility: hidden;
+}
 /* =================================
 Device width:
     <-- 320px
