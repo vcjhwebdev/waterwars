@@ -153,7 +153,7 @@ function placeModal(content)
   body.insertBefore(modal, body.children[0]);
 }
 
-function placeShips(targetID) {
+function placePlayerShips(targetID) {
 
   var shipLayout = placements[Math.floor(Math.random() * 9)+1];
   console.log(shipLayout);
@@ -164,14 +164,28 @@ function placeShips(targetID) {
       var cell = document.getElementById(targetID + '-' + row + '-' + column);
       if(shipLayout[row-1][column-1] == 1) {
         // place a ship at cell
-        cell.innerHTML = '<i class="fas fa-align-justify" id="ship"></i>';
+        cell.innerHTML = '<i class="fas fa-align-justify" id="playerShip"></i>';
       }
     }
   }
+}
+function placeComputerShips(targetID) {
 
+  var shipLayout1 = placements[Math.floor(Math.random() * 9)+1];
+  for(var row1 = 1; row1 <= 10; row1++)
+  {
+    for(var column1 = 1; column1 <= 10; column1++)
+    {
+      var cell1 = document.getElementById(targetID + '-' + row1 + '-' + column1);
+      if(shipLayout1[row1-1][column1-1] == 1) {
+        // place a ship at cell
+        cell1.innerHTML = '<i class="fas fa-align-justify" id="computerShip"></i>';
+      }
+    }
+  }
 }
 
-placeShips('player');
-placeShips('alien');
+placePlayerShips('player');
+placeComputerShips('alien');
 
 shipsLeft.textContent = "Ships Left: " + numOfShips;
