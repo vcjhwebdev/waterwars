@@ -157,6 +157,47 @@ Device width:
   .modal {
     text-align: center;
   }
+  button{
+    font-size: 20px;
+    border-radius: 10px;
+    min-width: 150px;
+    margin: 0 auto;
+    max-width: 200px;
+  }
+}
+/* =================================
+Device width:
+    320px -->   <-- 768px
+==================================== */
+@media (min-width: 320px) {
+  table {
+    width: 80%;
+    height: 500px;
+  }
+    .fa-align-justify,
+    .dead,
+    .hit,
+    .modal,
+    .modal-content{
+      font-size: 20px;
+    }
+    .modal-content {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 400px;
+    }
+    .modal {
+      text-align: center;
+    }
+    button{
+      font-size: 20px;
+      border-radius: 10px;
+      min-width: 300px;
+      margin: 0 auto;
+      max-width: 400px;
+    }
 }
 /* =================================
 Device width:
@@ -173,6 +214,23 @@ Device width:
     .modal,
     .modal-content{
       font-size: 20px;
+    }
+    .modal-content {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 400px;
+    }
+    .modal {
+      text-align: center;
+    }
+    button{
+      font-size: 20px;
+      border-radius: 10px;
+      min-width: 300px;
+      margin: 0 auto;
+      max-width: 400px;
     }
 }
 /* =================================
