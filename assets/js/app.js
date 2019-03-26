@@ -140,30 +140,35 @@ function placeModal(content)
   var modalContent = `
     <div class="modal-content">
       <h1>${content}</h1>
-      <button class="button operator" onclick="reload()">Play Again</button>
+      <button class="button operator">Play Again</button>
       <h1>STATISTICS</h1>
       <h2>Moves taken: MOVES TAKEN</h2>
     </div>`
   modal.innerHTML = modalContent;
+  var button = modal.querySelector('button');
+  button.addEventListener("click", function() {
+    location.reload();
+  });
   var body = document.querySelector('body');
   body.insertBefore(modal, body.children[0]);
 }
-function reload()
-{
-  location.reload();
-}
+
 function placeShips(targetID) {
 
   var shipLayout = placements[Math.floor(Math.random() * 9)+1];
-
+  console.log(shipLayout);
   for(var row = 1; row <= 10; row++)
   {
     for(var column = 1; column <= 10; column++)
     {
       var cell = document.getElementById(targetID + '-' + row + '-' + column);
-
+      if(shipLayout[row-1][column-1] == 1) {
+        // place a ship at cell
+        cell.innerHTML = '<i class="fas fa-align-justify" id="ship"></i>';
+      }
     }
   }
+
 }
 
 placeShips('player');
