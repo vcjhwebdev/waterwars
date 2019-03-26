@@ -39,7 +39,7 @@ td {
 
 .modal-content {
   border: 1px solid white;
-  background-color: rgba(0, 75, 125, 0);
+  background-color: rgba(22, 97, 186, 1);
   font-size: 1.1em;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,8 @@ td {
   justify-content: center;
   width: 80%;
   margin: 0 auto;
-  border-radius: 8px;
+  border-radius: 8px;;
+  color: white;
 }
 
 .fa-align-justify,
@@ -113,12 +114,20 @@ p.aliens {
   /* font-size: 24px; */
 }
 button{
-  background-color: #D4FFFF;
-  color: white;
   font-size: 20px;
   border-radius: 10px;
-  border-color: white;
-  background: rgba(212,255,255,0.5);
+  min-width: 500px;
+  margin: 0 auto;
+}
+.button.operator {
+	color: white;
+	background-color: #70A7EE;
+	border-bottom: 8px #5D7EEE solid;
+	border-top: 4px #34486E solid;
+}
+.operator:active {
+	border-bottom: 8px #34486E solid;
+	border-top: 4px #5D7EEE solid;
 }
 
 /* =================================
@@ -133,8 +142,20 @@ Device width:
   }
   .fa-align-justify,
   .dead,
-  .hit {
+  .hit
+  .modal,
+  .modal-content{
     font-size: 15px;
+  }
+  .modal-content {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 200px;
+  }
+  .modal {
+    text-align: center;
   }
 }
 /* =================================
@@ -148,7 +169,9 @@ Device width:
   }
     .fa-align-justify,
     .dead,
-    .hit {
+    .hit,
+    .modal,
+    .modal-content{
       font-size: 20px;
     }
 }
@@ -163,7 +186,9 @@ Device width:
   }
   .fa-align-justify,
   .dead,
-  .hit {
+  .hit
+  .modal,
+  .modal-content{
     font-size: 25px;
   }
 }
