@@ -120,14 +120,14 @@ button{
   margin: 0 auto;
 }
 .button.operator {
-	color: #57FBFF;
-	background-color: black;
-	border-bottom: black 8px solid;
-	border-top: 4px #6f6f6f solid;
+	color: white;
+	background-color: #70A7EE;
+	border-bottom: 8px #5D7EEE solid;
+	border-top: 4px #34486E solid;
 }
 .operator:active {
-	border-top: black 8px solid;
-	border-bottom: 4px #6f6f6f solid;
+	border-bottom: 8px #34486E solid;
+	border-top: 4px #5D7EEE solid;
 }
 
 /* =================================
@@ -142,8 +142,20 @@ Device width:
   }
   .fa-align-justify,
   .dead,
-  .hit {
+  .hit
+  .modal,
+  .modal-content{
     font-size: 15px;
+  }
+  .modal-content {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 200px;
+  }
+  .modal {
+    text-align: center;
   }
 }
 /* =================================
@@ -157,7 +169,9 @@ Device width:
   }
     .fa-align-justify,
     .dead,
-    .hit {
+    .hit,
+    .modal,
+    .modal-content{
       font-size: 20px;
     }
 }
@@ -172,7 +186,9 @@ Device width:
   }
   .fa-align-justify,
   .dead,
-  .hit {
+  .hit
+  .modal,
+  .modal-content{
     font-size: 25px;
   }
 }
