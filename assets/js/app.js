@@ -148,11 +148,13 @@ function placeModal(content)
   var body = document.querySelector('body');
   body.insertBefore(modal, body.children[0]);
 }
-
+function reload()
+{
+  location.reload();
+}
 function placeShips(targetID) {
 
-  var shipLayout = placements[Math.ceil(Math.random() * 9)];
-  console.log(shipLayout);
+  var shipLayout = placements[Math.floor(Math.random() * 9)+1];
 
   for(var row = 1; row <= 10; row++)
   {
