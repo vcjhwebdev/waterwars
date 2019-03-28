@@ -56,7 +56,12 @@ td {
 .hit {
   font-size: 20px;
 }
-
+.fa-align-justify {
+  color: white;
+}
+.hit {
+  color:red;
+}
   .miss{
   color: #BFBEC7;
 }
