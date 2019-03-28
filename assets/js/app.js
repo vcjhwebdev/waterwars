@@ -196,7 +196,7 @@ computerBoard.addEventListener('click', function(e)
     }
     else if(e.target.innerHTML == " ")
     {
-      e.target.innerHTML = "o";
+      e.target.innerHTML = '<div id="miss">X</div>';
     }
 });
 function attack()
