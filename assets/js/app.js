@@ -198,7 +198,7 @@ computerBoard.addEventListener('click', function(e)
     }
     else if(e.target.innerHTML == " ")
     {
-      e.target.innerHTML = '<div id="miss">X</div>';
+      e.target.innerHTML = '<div class="miss">X</div>';
       console.log("miss");
       attack();
     }
