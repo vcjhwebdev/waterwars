@@ -60,7 +60,7 @@ td {
 .fa-align-justify {
   color: white;
 }
-.hit {
+.hitComputership {
   color: red;
 }
 .dead {
@@ -122,12 +122,12 @@ button{
 .button.operator {
 	color: white;
 	background-color: #70A7EE;
-	border-bottom: 8px #5D7EEE solid;
-	border-top: 4px #34486E solid;
+	border-bottom: 8px #488DD9 solid;
+	border-top: 4px #3D7DE8 solid;
 }
 .operator:active {
-	border-bottom: 8px #34486E solid;
-	border-top: 4px #5D7EEE solid;
+	border-bottom: 8px #3D7DE8 solid;
+	border-top: 4px #488DD9 solid;
 }
 #computerShip {
   visibility: hidden;
