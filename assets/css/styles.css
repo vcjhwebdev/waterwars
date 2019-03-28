@@ -57,10 +57,10 @@ td {
   font-size: 20px;
 }
 
-  #miss{
+  .miss{
   color: #BFBEC7;
 }
-  #hitComputerShip {
+  .hitComputerShip {
   color: red;
 }
 
