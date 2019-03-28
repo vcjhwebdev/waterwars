@@ -126,7 +126,7 @@ button{
 	border-bottom: 8px #3D7DE8 solid;
 	border-top: 4px #488DD9 solid;
 }
-#computerShip {
+  .computerShip {
   visibility: hidden;
 }
 /* =================================
