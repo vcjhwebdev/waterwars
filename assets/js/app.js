@@ -179,7 +179,7 @@ function placeComputerShips(targetID) {
       var cell1 = document.getElementById(targetID + '-' + row1 + '-' + column1);
       if(shipLayout1[row1-1][column1-1] == 1) {
         // place a ship at cell
-        cell1.innerHTML = '<i class="fas fa-align-justify" class="computerShip"></i>';
+        cell1.innerHTML = '<i class="fas fa-align-justify computerShip"></i>';
       }
     }
   }
