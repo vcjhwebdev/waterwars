@@ -179,7 +179,7 @@ function placeComputerShips(targetID) {
       var cell1 = document.getElementById(targetID + '-' + row1 + '-' + column1);
       if(shipLayout1[row1-1][column1-1] == 1) {
         // place a ship at cell
-        cell1.innerHTML = '<i class="fas fa-align-justify" id="computerShip"></i>';
+        cell1.innerHTML = '<i class="fas fa-align-justify" class="computerShip"></i>';
       }
     }
   }
@@ -190,17 +190,33 @@ placeComputerShips('alien');
 
 computerBoard.addEventListener('click', function(e)
 {
-    if(e.target.innerHTML == '<i class="fas fa-align-justify" id="computerShip"></i>')
+    if(e.target.innerHTML == '<i class="fas fa-align-justify" class="computerShip"></i>')
     {
-      e.target.innerHTML = '<i class="fas fa-align-justify" id="hitComputerShip"></i>';
+      e.target.innerHTML = '<i class="fas fa-align-justify" class="hitComputerShip"></i>';
+      console.log("hit");
+      attack();
     }
     else if(e.target.innerHTML == " ")
     {
       e.target.innerHTML = '<div id="miss">X</div>';
+      console.log("miss");
+      attack();
     }
 });
 function attack()
 {
-
+  function generateRandomCoordinate() {
+    // var row = Math....
+    var randomRow = 1;
+    // var column = Math...
+    var randomColumn = 4;
+    return randomRow + "-" + randomColumn;
+  }
+  // choose a random coordinate
+  var coord = generateRandomCoordinate();
+  // 4-2
+  // [1-10][1-10]
+  // while target is empty
+  // check if there's a ship
 }
 shipsLeft.textContent = "Ships Left: " + numOfShips;
