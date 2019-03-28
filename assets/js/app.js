@@ -190,9 +190,9 @@ placeComputerShips('alien');
 
 computerBoard.addEventListener('click', function(e)
 {
-    if(e.target.innerHTML == '<i class="fas fa-align-justify" class="computerShip"></i>')
+    if(e.target.innerHTML == '<i class="fas fa-align-justify computerShip"></i>')
     {
-      e.target.innerHTML = '<i class="fas fa-align-justify" class="hitComputerShip"></i>';
+      e.target.innerHTML = '<i class="fas fa-align-justify hitComputerShip"></i>';
       console.log("hit");
       attack();
     }
