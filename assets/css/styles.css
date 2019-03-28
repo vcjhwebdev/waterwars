@@ -58,13 +58,10 @@ td {
 }
 
 .fa-align-justify {
-  color: white;
-}
-.hitComputership {
-  color: red;
-}
-.dead {
   color: grey;
+}
+  #hitComputerShip {
+  color: red;
 }
 
 .shipsLeft {
