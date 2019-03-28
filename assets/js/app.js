@@ -188,4 +188,19 @@ function placeComputerShips(targetID) {
 placePlayerShips('player');
 placeComputerShips('alien');
 
+computerBoard.addEventListener('click', function(e)
+{
+    if(e.target.innerHTML == '<i class="fas fa-align-justify" id="computerShip"></i>')
+    {
+      e.target.innerHTML = '<i class="fas fa-align-justify" id="hitComputerShip"></i>';
+    }
+    else if(e.target.innerHTML == " ")
+    {
+      e.target.innerHTML = "o";
+    }
+});
+function attack()
+{
+
+}
 shipsLeft.textContent = "Ships Left: " + numOfShips;
