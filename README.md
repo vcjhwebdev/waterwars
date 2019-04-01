@@ -1,6 +1,6 @@
 # Water Wars
 
-Play battleship.
+If you like Battleship, you'll like this.
 
 ## Authors
 
@@ -20,4 +20,3 @@ Play battleship.
 **Version 1.0**
 
 - First Release!!!
- 
