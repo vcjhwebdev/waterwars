@@ -1,6 +1,8 @@
 # Water Wars
 
-If you like Battleship, you'll like this.
+- Attack the enemy with precision!!!
+- Attack or get ATTACKED!!!
+- Battle TODAY!!!
 
 ## Authors
 
@@ -11,9 +13,9 @@ If you like Battleship, you'll like this.
 
 ## Features
 
-- Attack the enemy with precision!!!
-- Attack or get ATTACKED!!!
-- Battle TODAY!!!
+- Able to shoot an AI
+- AI will shoot and possibly KILL YOU!!!
+- YOU CAN PLAY AGAIN!!!
 
 ### Changelog
 
