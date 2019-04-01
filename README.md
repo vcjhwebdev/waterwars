@@ -11,12 +11,13 @@ Play battleship.
 
 ## Features
 
-- Place Ships and drown others
+- Attack the enemy with precision!!!
+- Attack or get ATTACKED!!!
+- Battle TODAY!!!
 
 ### Changelog
 
 **Version 1.0**
 
-- added templates for ship placements
-- added modal
-- removed ability to interact with enemy board
+- First Release!!!
+ 
