@@ -23,6 +23,12 @@ td {
   text-align: center;
   color: white;
 }
+body {
+-webkit-user-select: none;
+}
+body {
+-webkit-tap-highlight-color: transparent;
+}
 
 /* modal */
 .modal {
