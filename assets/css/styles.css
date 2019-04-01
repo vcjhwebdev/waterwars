@@ -29,6 +29,9 @@ body {
 body {
 -webkit-tap-highlight-color: transparent;
 }
+body {
+-webkit-touch-callout: none;
+}
 
 /* modal */
 .modal {
