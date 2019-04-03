@@ -1,6 +1,8 @@
 # Water Wars
 
-Play battleship.
+- Attack the enemy with precision!!!
+- Attack or get ATTACKED!!!
+- Battle TODAY!!!
 
 ## Authors
 
@@ -11,12 +13,12 @@ Play battleship.
 
 ## Features
 
-- Place Ships and drown others
+- Able to shoot an AI
+- AI will shoot and possibly KILL YOU!!!
+- YOU CAN PLAY AGAIN!!!
 
 ### Changelog
 
 **Version 1.0**
 
-- added templates for ship placements
-- added modal
-- removed ability to interact with enemy board
+- First Release!!!
