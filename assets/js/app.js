@@ -9,6 +9,8 @@ var numOfShips = 5;
 var shipStart = false;
 var shipEnd = false;
 var ting = 0;
+var shipLeft = 17;
+var pShipLeft = 17;
 var shipsLeft = document.querySelector('.shipsLeft');
 var placements = [
   [
@@ -164,7 +166,7 @@ function placePlayerShips(targetID) {
       var cell = document.getElementById(targetID + '-' + row + '-' + column);
       if(shipLayout[row-1][column-1] == 1) {
         // place a ship at cell
-        cell.innerHTML = '<i class="fas fa-align-justify" id="playerShip"></i>';
+        cell.innerHTML = '<i class="fas fa-align-justify playerShip"></i>';
       }
     }
   }
@@ -194,6 +196,7 @@ computerBoard.addEventListener('click', function(e)
     {
       e.target.innerHTML = '<i class="fas fa-align-justify hitComputerShip"></i>';
       console.log("hit");
+      shipLeft -= 1;
       attack();
     }
     else if(e.target.innerHTML == " ")
@@ -202,19 +205,50 @@ computerBoard.addEventListener('click', function(e)
       console.log("miss");
       attack();
     }
+    if(shipLeft <= 0)
+    {
+      placeModal("You Win!!!");
+    }
+    if(pShipLeft <= 0)
+    {
+      placeModal("You Lost Loser!!!");
+    }
 });
+
+
 function attack()
 {
+  var coord = generateRandomCoordinate();
+  var coordId = document.getElementById(coord);
   function generateRandomCoordinate() {
-    // var row = Math....
-    var randomRow = 1;
-    // var column = Math...
-    var randomColumn = 4;
-    return randomRow + "-" + randomColumn;
+    do {
+      // var row = Math....
+      var randomRow = Math.floor(Math.random()*10)+ 1;
+      // var column = Math...
+      var randomColumn = Math.floor(Math.random()*10)+ 1;
+      var id = "player-" + randomRow + "-" + randomColumn;
+      var target = document.getElementById("player-" + randomRow + "-" + randomColumn);
+
+    } while(target.innerHTML !== " " && target.innerHTML !== '<i class="fas fa-align-justify playerShip"></i>');
+
+    console.log(id);
+    return id;
   }
   // choose a random coordinate
-  var coord = generateRandomCoordinate();
-  // 4-2
+    if(coordId.innerHTML == '<i class="fas fa-align-justify playerShip"></i>')
+    {
+      coordId.innerHTML = '<i class="fas fa-align-justify hitComputerShip"></i>';
+      pShipLeft -= 1;
+    }
+    else if(coordId.innerHTML !== '<i class="fas fa-align-justify hitComputerShip"></i>')
+    {
+      coordId.innerHTML = '<div class="miss">x</div>';
+    }
+
+  if(coordId.innerHTML == '<i class="fas fa-align-justify hitComputerShip"></i>' || coordId.innerHTML == '<div class="miss">x</div>')
+  {
+    generateRandomCoordinate();
+  }
   // [1-10][1-10]
   // while target is empty
   // check if there's a ship
