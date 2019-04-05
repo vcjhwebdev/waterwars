@@ -4,7 +4,7 @@ Device width:
     320px -->   <-- 768px
 ==================================== */
 body {
-  background-image: url(../../img/wateersaand.jp2);
+  background-image: url('../../img/wateersaand.jpg');
   font-family: 'Orbitron', sans-serif;
   margin: 0;
 
