@@ -1,13 +1,358 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--WEB APP-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000"/>
+    <!--iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta id="status-bar-meta" name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Water Wars">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--icons-->
+    <link rel="apple-touch-icon" href="touch-icons/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icons/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icons/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icons/touch-icon-ipad-retina.png">
+    <!--Splash Screens-->
+    <link href="splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <!--manifest.json-->
+    <link rel="manifest" href="manifest.json">
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Web App Title</title>
+    <title>Water Wars</title>
   </head>
   <body>
+    <!-- <div class="modal">
+      <div class="modal-content">
+        <h1>You won!</h1>
+        <button type="button" onclick="reload()">Play Again</button>
+        <h1>STATISTICS</h1>
+        <h2>Moves taken: MOVES TAKEN</h2>
+      </div>
+    </div> -->
+
+<p class ="humans"><strong>Humans</strong></p>
+<h3 style="text-align:center;"><i class="fas fa-align-justify"></i> = Safe <i class="fas fa-align-justify hit"></i> = Hit</h3>
+    <table id="player">
+      <tr class="number">
+        <td class="hidden"></td>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+      </tr>
+      <tr>
+        <td class="letter">A</td>
+        <td id="player-1-1"> </td>
+        <td id="player-1-2"> </td>
+        <td id="player-1-3"> </td>
+        <td id="player-1-4"> </td>
+        <td id="player-1-5"> </td>
+        <td id="player-1-6"> </td>
+        <td id="player-1-7"> </td>
+        <td id="player-1-8"> </td>
+        <td id="player-1-9"> </td>
+        <td id="player-1-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">B</td>
+        <td id="player-2-1"> </td>
+        <td id="player-2-2"> </td>
+        <td id="player-2-3"> </td>
+        <td id="player-2-4"> </td>
+        <td id="player-2-5"> </td>
+        <td id="player-2-6"> </td>
+        <td id="player-2-7"> </td>
+        <td id="player-2-8"> </td>
+        <td id="player-2-9"> </td>
+        <td id="player-2-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">C</td>
+        <td id="player-3-1"> </td>
+        <td id="player-3-2"> </td>
+        <td id="player-3-3"> </td>
+        <td id="player-3-4"> </td>
+        <td id="player-3-5"> </td>
+        <td id="player-3-6"> </td>
+        <td id="player-3-7"> </td>
+        <td id="player-3-8"> </td>
+        <td id="player-3-9"> </td>
+        <td id="player-3-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">D</td>
+        <td id="player-4-1"> </td>
+        <td id="player-4-2"> </td>
+        <td id="player-4-3"> </td>
+        <td id="player-4-4"> </td>
+        <td id="player-4-5"> </td>
+        <td id="player-4-6"> </td>
+        <td id="player-4-7"> </td>
+        <td id="player-4-8"> </td>
+        <td id="player-4-9"> </td>
+        <td id="player-4-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">E</td>
+        <td id="player-5-1"> </td>
+        <td id="player-5-2"> </td>
+        <td id="player-5-3"> </td>
+        <td id="player-5-4"> </td>
+        <td id="player-5-5"> </td>
+        <td id="player-5-6"> </td>
+        <td id="player-5-7"> </td>
+        <td id="player-5-8"> </td>
+        <td id="player-5-9"> </td>
+        <td id="player-5-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">F</td>
+        <td id="player-6-1"> </td>
+        <td id="player-6-2"> </td>
+        <td id="player-6-3"> </td>
+        <td id="player-6-4"> </td>
+        <td id="player-6-5"> </td>
+        <td id="player-6-6"> </td>
+        <td id="player-6-7"> </td>
+        <td id="player-6-8"> </td>
+        <td id="player-6-9"> </td>
+        <td id="player-6-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">G</td>
+        <td id="player-7-1"> </td>
+        <td id="player-7-2"> </td>
+        <td id="player-7-3"> </td>
+        <td id="player-7-4"> </td>
+        <td id="player-7-5"> </td>
+        <td id="player-7-6"> </td>
+        <td id="player-7-7"> </td>
+        <td id="player-7-8"> </td>
+        <td id="player-7-9"> </td>
+        <td id="player-7-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">H</td>
+        <td id="player-8-1"> </td>
+        <td id="player-8-2"> </td>
+        <td id="player-8-3"> </td>
+        <td id="player-8-4"> </td>
+        <td id="player-8-5"> </td>
+        <td id="player-8-6"> </td>
+        <td id="player-8-7"> </td>
+        <td id="player-8-8"> </td>
+        <td id="player-8-9"> </td>
+        <td id="player-8-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">I</td>
+        <td id="player-9-1"> </td>
+        <td id="player-9-2"> </td>
+        <td id="player-9-3"> </td>
+        <td id="player-9-4"> </td>
+        <td id="player-9-5"> </td>
+        <td id="player-9-6"> </td>
+        <td id="player-9-7"> </td>
+        <td id="player-9-8"> </td>
+        <td id="player-9-9"> </td>
+        <td id="player-9-10"> </td>
+      </tr>
+      <tr>
+        <td class="letter">J</td>
+        <td id="player-10-1"> </td>
+        <td id="player-10-2"> </td>
+        <td id="player-10-3"> </td>
+        <td id="player-10-4"> </td>
+        <td id="player-10-5"> </td>
+        <td id="player-10-6"> </td>
+        <td id="player-10-7"> </td>
+        <td id="player-10-8"> </td>
+        <td id="player-10-9"> </td>
+        <td id="player-10-10"> </td>
+      </tr>
+    </table>
+  <!--player-->
+  <p class="aliens"><strong>Aliens</strong></p>
+  <h3 style="text-align:center;"><strong class="miss">X</strong> = Missed <strong class="hitComputerShip fas fa-align-justify"></strong> = Hit</h3>
+    <table id="computer">
+    <tr class="number">
+      <td class="hidden"></td>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+      <th>6</th>
+      <th>7</th>
+      <th>8</th>
+      <th>9</th>
+      <th>10</th>
+    </tr>
+    <tr>
+      <td class="letter">A</td>
+      <td id="alien-1-1"> </td>
+      <td id="alien-1-2"> </td>
+      <td id="alien-1-3"> </td>
+      <td id="alien-1-4"> </td>
+      <td id="alien-1-5"> </td>
+      <td id="alien-1-6"> </td>
+      <td id="alien-1-7"> </td>
+      <td id="alien-1-8"> </td>
+      <td id="alien-1-9"> </td>
+      <td id="alien-1-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">B</td>
+      <td id="alien-2-1"> </td>
+      <td id="alien-2-2"> </td>
+      <td id="alien-2-3"> </td>
+      <td id="alien-2-4"> </td>
+      <td id="alien-2-5"> </td>
+      <td id="alien-2-6"> </td>
+      <td id="alien-2-7"> </td>
+      <td id="alien-2-8"> </td>
+      <td id="alien-2-9"> </td>
+      <td id="alien-2-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">C</td>
+      <td id="alien-3-1"> </td>
+      <td id="alien-3-2"> </td>
+      <td id="alien-3-3"> </td>
+      <td id="alien-3-4"> </td>
+      <td id="alien-3-5"> </td>
+      <td id="alien-3-6"> </td>
+      <td id="alien-3-7"> </td>
+      <td id="alien-3-8"> </td>
+      <td id="alien-3-9"> </td>
+      <td id="alien-3-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">D</td>
+      <td id="alien-4-1"> </td>
+      <td id="alien-4-2"> </td>
+      <td id="alien-4-3"> </td>
+      <td id="alien-4-4"> </td>
+      <td id="alien-4-5"> </td>
+      <td id="alien-4-6"> </td>
+      <td id="alien-4-7"> </td>
+      <td id="alien-4-8"> </td>
+      <td id="alien-4-9"> </td>
+      <td id="alien-4-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">E</td>
+      <td id="alien-5-1"> </td>
+      <td id="alien-5-2"> </td>
+      <td id="alien-5-3"> </td>
+      <td id="alien-5-4"> </td>
+      <td id="alien-5-5"> </td>
+      <td id="alien-5-6"> </td>
+      <td id="alien-5-7"> </td>
+      <td id="alien-5-8"> </td>
+      <td id="alien-5-9"> </td>
+      <td id="alien-5-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">F</td>
+      <td id="alien-6-1"> </td>
+      <td id="alien-6-2"> </td>
+      <td id="alien-6-3"> </td>
+      <td id="alien-6-4"> </td>
+      <td id="alien-6-5"> </td>
+      <td id="alien-6-6"> </td>
+      <td id="alien-6-7"> </td>
+      <td id="alien-6-8"> </td>
+      <td id="alien-6-9"> </td>
+      <td id="alien-6-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">G</td>
+      <td id="alien-7-1"> </td>
+      <td id="alien-7-2"> </td>
+      <td id="alien-7-3"> </td>
+      <td id="alien-7-4"> </td>
+      <td id="alien-7-5"> </td>
+      <td id="alien-7-6"> </td>
+      <td id="alien-7-7"> </td>
+      <td id="alien-7-8"> </td>
+      <td id="alien-7-9"> </td>
+      <td id="alien-7-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">H</td>
+      <td id="alien-8-1"> </td>
+      <td id="alien-8-2"> </td>
+      <td id="alien-8-3"> </td>
+      <td id="alien-8-4"> </td>
+      <td id="alien-8-5"> </td>
+      <td id="alien-8-6"> </td>
+      <td id="alien-8-7"> </td>
+      <td id="alien-8-8"> </td>
+      <td id="alien-8-9"> </td>
+      <td id="alien-8-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">I</td>
+      <td id="alien-9-1"> </td>
+      <td id="alien-9-2"> </td>
+      <td id="alien-9-3"> </td>
+      <td id="alien-9-4"> </td>
+      <td id="alien-9-5"> </td>
+      <td id="alien-9-6"> </td>
+      <td id="alien-9-7"> </td>
+      <td id="alien-9-8"> </td>
+      <td id="alien-9-9"> </td>
+      <td id="alien-9-10"> </td>
+    </tr>
+    <tr>
+      <td class="letter">J</td>
+      <td id="alien-10-1"> </td>
+      <td id="alien-10-2"> </td>
+      <td id="alien-10-3"> </td>
+      <td id="alien-10-4"> </td>
+      <td id="alien-10-5"> </td>
+      <td id="alien-10-6"> </td>
+      <td id="alien-10-7"> </td>
+      <td id="alien-10-8"> </td>
+      <td id="alien-10-9"> </td>
+      <td id="alien-10-10"> </td>
+    </tr>
+  </table>
+
+
 
     <!-- JavaScript File (loaded after the html has rendered) -->
     <script src="assets/js/app.js"></script>
+    <!--sw.js-->
+    <script>
+    if ('serviceWorker' in navigator) {
+    	window.addEventListener('load', function() {
+      		navigator.serviceWorker.register('sw.js').then(function(registration) {
+      		// Registration was successful
+      		console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      	}, function(err) {
+      		// registration failed :(
+      		console.log('ServiceWorker registration failed: ', err);
+      	});
+      });
+    }
+    </script>
   </body>
 </html>

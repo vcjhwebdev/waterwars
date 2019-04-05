@@ -1,19 +1,24 @@
-# APP NAME HERE
+# Water Wars
 
-APP DESCRIPTION HERE
+- Attack the enemy with precision!!!
+- Attack or get ATTACKED!!!
+- Battle TODAY!!!
 
 ## Authors
 
-- [STUDENT NAME HERE](http://link-to-website-here/)
-- [STUDENT NAME HERE](http://link-to-website-here/)
-- [STUDENT NAME HERE](http://link-to-website-here/)
+- [Ashton Cho](https://pwopup.github.io)
+- [Hansel John](https://tedwarsdodif.github.io)
+- [David Kou](https://toasthasfeelings.github.io)
+- [Naman Nair](https://ramen-21.github.io)
 
 ## Features
 
-- APP FEATURES HERE
+- Able to shoot an AI
+- AI will shoot and possibly KILL YOU!!!
+- YOU CAN PLAY AGAIN!!!
 
 ### Changelog
 
-**Version 0.1**
+**Version 1.0**
 
-- CHANGES HERE
+- First Release!!!
