@@ -143,8 +143,6 @@ function placeModal(content)
     <div class="modal-content">
       <h1>${content}</h1>
       <button class="button operator">Play Again</button>
-      <h1>STATISTICS</h1>
-      <h2>Moves taken: MOVES TAKEN</h2>
     </div>`
   modal.innerHTML = modalContent;
   var button = modal.querySelector('button');
