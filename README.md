@@ -22,3 +22,9 @@
 **Version 1.0**
 
 - First Release!!!
+
+**Version 1.1**
+
+- Fixed Bugs
+- Improved image loading times
+- Removed unused CSS
