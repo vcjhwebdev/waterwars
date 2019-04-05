@@ -251,4 +251,3 @@ function attack()
   // while target is empty
   // check if there's a ship
 }
-shipsLeft.textContent = "Ships Left: " + numOfShips;
