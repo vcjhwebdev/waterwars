@@ -31,18 +31,10 @@
     <title>Water Wars</title>
   </head>
   <body>
-    <!-- <div class="modal">
-      <div class="modal-content">
-        <h1>You won!</h1>
-        <button type="button" onclick="reload()">Play Again</button>
-        <h1>STATISTICS</h1>
-        <h2>Moves taken: MOVES TAKEN</h2>
-      </div>
-    </div> -->
-
-<p class ="humans"><strong>Humans</strong></p>
-<h3 style="text-align:center;"><i class="fas fa-align-justify"></i> = Safe <i class="fas fa-align-justify hit"></i> = Hit</h3>
-    <table id="player">
+<div>
+  <p class ="humans"><strong>Humans</strong></p>
+  <h3 style="text-align:center;"><i class="fas fa-align-justify"></i> = Safe <i class="fas fa-align-justify hit"></i> = Hit</h3>
+      <table id="player">
       <tr class="number">
         <td class="hidden"></td>
         <th>1</th>
@@ -188,6 +180,8 @@
       </tr>
     </table>
   <!--player-->
+</div>
+<div>
   <p class="aliens"><strong>Aliens</strong></p>
   <h3 style="text-align:center;"><strong class="miss">X</strong> = Missed <strong class="hitComputerShip fas fa-align-justify"></strong> = Hit</h3>
     <table id="computer">
@@ -336,7 +330,7 @@
     </tr>
   </table>
 
-
+</div>
 
     <!-- JavaScript File (loaded after the html has rendered) -->
     <script src="assets/js/app.js"></script>
