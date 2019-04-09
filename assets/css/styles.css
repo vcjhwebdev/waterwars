@@ -7,7 +7,13 @@ body {
   background-image: url('../../img/wateersaand.jpg');
   font-family: 'Orbitron', sans-serif;
   margin: 0;
-
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%
+  align-items: center;
+}
+body div {
+  flex: 1 0 50%
 }
 table {
   width: 100%;
@@ -174,7 +180,7 @@ Device width:
 ==================================== */
 @media (min-width: 320px) {
   table {
-    width: 80%;
+    /*width: 80%;*/
     height: 500px;
   }
     .fa-align-justify,
@@ -208,8 +214,8 @@ Device width:
 ==================================== */
 @media (min-width: 768px) {
   table {
-    width: 80%;
-    height: 500px;
+    /*width: 80%;*/
+    height: 500px
   }
     .fa-align-justify,
     .dead,
@@ -242,7 +248,7 @@ Device width:
 ==================================== */
 @media (min-width: 1024px) {
   table {
-    width: 60%;
+    /*width: 60%;*/
     height: 500px;
   }
   .fa-align-justify,
