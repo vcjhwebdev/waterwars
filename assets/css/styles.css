@@ -1,7 +1,7 @@
 /* =================================
 DEFAULT STYLES (NO MEDIA QUERY)
 Device width:
-    320px -->   <-- 768px
+    320px -->   <-- 1024px
 ==================================== */
 
 body {
@@ -11,6 +11,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
+  font-size: 20px;
 }
 
 /* This makes the humans show above the aliens on tall displays */
@@ -78,7 +79,6 @@ body {
 .modal-content {
   border: 1px solid white;
   background-color: rgba(22, 97, 186, 1);
-  font-size: 1.1em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -90,7 +90,7 @@ body {
 }
 
 .fa-align-justify, .dead, .hit {
-  font-size: 20px;
+  font-size: inherit;
 }
 
 .fa-align-justify {
@@ -112,13 +112,13 @@ body {
 .shipsLeft {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 .shipLength {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 table .hidden {
@@ -135,13 +135,13 @@ table .hidden {
 h2.humans, h2.aliens {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  font-size: 25px;
+  font-size: 1.5em;
 }
 
 .button {
-  font-size: 20px;
+  font-size: 1em;
   border-radius: 10px;
-  margin: 16px;
+  margin: 1em;
 }
 
 .button.operator {
@@ -168,20 +168,7 @@ Device width:
 @media (max-width: 320px) {
   body {
     grid-template-columns: 1fr;
-  }
-  .fa-align-justify, .dead, .hit .modal, .modal-content {
     font-size: 15px;
-  }
-}
-
-/* =================================
-Device width:
-    320px -->   <-- 1024px
-==================================== */
-
-@media (min-width: 320px) {
-  .fa-align-justify, .dead, .hit, .modal, .modal-content {
-    font-size: 20px;
   }
 }
 
@@ -191,7 +178,7 @@ Device width:
 ==================================== */
 
 @media (min-width: 1024px) {
-  .fa-align-justify, .dead, .hit .modal, .modal-content {
+  body {
     font-size: 25px;
   }
 }
