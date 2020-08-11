@@ -146,7 +146,7 @@ function placeModal(content)
     </div>`
   modal.innerHTML = modalContent;
   var button = modal.querySelector('button');
-  button.addEventListener("click", function() {
+  button.addEventListener("click", () => {
     location.reload();
   });
   var body = document.querySelector('body');
@@ -188,7 +188,7 @@ function placeComputerShips(targetID) {
 placePlayerShips('player');
 placeComputerShips('alien');
 
-computerBoard.addEventListener('click', function(e)
+computerBoard.addEventListener('click', e =>
 {
     if(e.target.innerHTML == '<i class="fas fa-align-justify computerShip"></i>')
     {
