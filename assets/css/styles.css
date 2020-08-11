@@ -19,6 +19,7 @@ table {
   width: 100%;
   /* max-width: 425px; */
   margin: 0 auto;
+  padding: 5px;
   /* vertical-align: middle; */
   max-width: 1000px;
 }
