@@ -1,9 +1,3 @@
-/* =================================
-DEFAULT STYLES (NO MEDIA QUERY)
-Device width:
-    320px -->   <-- 1024px
-==================================== */
-
 body {
   background-image: url('../../img/wateersaand.jpg');
   font-family: 'Orbitron', sans-serif;
@@ -11,12 +5,20 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 100vh;
-  font-size: 20px;
+  font-size: min(calc(10px + 1.5vw), 25px);
 }
 
 /* This makes the humans show above the aliens on tall displays */
 
 @media (max-aspect-ratio: 3/4) {
+  body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* This makes the humans show above the aliens on narrow displays */
+
+@media (max-width: 480px) {
   body {
     grid-template-columns: 1fr;
   }
@@ -137,27 +139,4 @@ h3 {
 
 .computerShip {
   visibility: hidden;
-}
-
-/* =================================
-Device width:
-    <-- 320px
-==================================== */
-
-@media (max-width: 320px) {
-  body {
-    grid-template-columns: 1fr;
-    font-size: 15px;
-  }
-}
-
-/* =================================
-Device width:
-    1024px -->
-==================================== */
-
-@media (min-width: 1024px) {
-  body {
-    font-size: 25px;
-  }
 }
