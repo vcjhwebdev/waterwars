@@ -13,7 +13,7 @@ body {
   height: 100vh;
 }
 
-/* Maximum aspect ratio */
+/* This makes the humans show above the aliens on tall displays */
 
 @media (max-aspect-ratio: 2/3) {
   body {
