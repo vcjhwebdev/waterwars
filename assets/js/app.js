@@ -11,7 +11,6 @@ var shipEnd = false;
 var ting = 0;
 var shipLeft = 17;
 var pShipLeft = 17;
-var shipsLeft = document.querySelector('.shipsLeft');
 var placements = [
   [
     [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -142,7 +141,7 @@ function placeModal(content)
   var modalContent = `
     <div class="modal-content">
       <h1>${content}</h1>
-      <button class="button operator">Play Again</button>
+      <button class="operator">Play Again</button>
     </div>`
   modal.innerHTML = modalContent;
   var button = modal.querySelector('button');
@@ -192,7 +191,7 @@ computerBoard.addEventListener('click', e =>
 {
     if(e.target.innerHTML == '<i class="fas fa-align-justify computerShip"></i>')
     {
-      e.target.innerHTML = '<i class="fas fa-align-justify hitComputerShip"></i>';
+      e.target.innerHTML = '<i class="fas fa-align-justify hit"></i>';
       console.log("hit");
       shipLeft -= 1;
       attack();
@@ -235,15 +234,15 @@ function attack()
   // choose a random coordinate
     if(coordId.innerHTML == '<i class="fas fa-align-justify playerShip"></i>')
     {
-      coordId.innerHTML = '<i class="fas fa-align-justify hitComputerShip"></i>';
+      coordId.innerHTML = '<i class="fas fa-align-justify hit"></i>';
       pShipLeft -= 1;
     }
-    else if(coordId.innerHTML !== '<i class="fas fa-align-justify hitComputerShip"></i>')
+    else if(coordId.innerHTML !== '<i class="fas fa-align-justify hit"></i>')
     {
       coordId.innerHTML = '<div class="miss">x</div>';
     }
 
-  if(coordId.innerHTML == '<i class="fas fa-align-justify hitComputerShip"></i>' || coordId.innerHTML == '<div class="miss">x</div>')
+  if(coordId.innerHTML == '<i class="fas fa-align-justify hit"></i>' || coordId.innerHTML == '<div class="miss">x</div>')
   {
     generateRandomCoordinate();
   }
