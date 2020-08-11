@@ -140,7 +140,6 @@ h2.humans, h2.aliens {
 .button {
   font-size: 20px;
   border-radius: 10px;
-  min-width: 500px;
   margin: 0 auto;
 }
 
@@ -173,27 +172,17 @@ Device width:
     font-size: 15px;
   }
   .modal-content {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     max-width: 200px;
   }
-  .modal {
-    text-align: center;
-  }
   .button {
-    font-size: 20px;
-    border-radius: 10px;
     min-width: 150px;
-    margin: 0 auto;
     max-width: 200px;
   }
 }
 
 /* =================================
 Device width:
-    320px -->   <-- 768px
+    320px -->   <-- 1024px
 ==================================== */
 
 @media (min-width: 320px) {
@@ -201,48 +190,10 @@ Device width:
     font-size: 20px;
   }
   .modal-content {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     max-width: 400px;
-  }
-  .modal {
-    text-align: center;
   }
   .button {
-    font-size: 20px;
-    border-radius: 10px;
     min-width: 300px;
-    margin: 0 auto;
-    max-width: 400px;
-  }
-}
-
-/* =================================
-Device width:
-    768px -->   <-- 1024px
-==================================== */
-
-@media (min-width: 768px) {
-  .fa-align-justify, .dead, .hit, .modal, .modal-content {
-    font-size: 20px;
-  }
-  .modal-content {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 400px;
-  }
-  .modal {
-    text-align: center;
-  }
-  .button {
-    font-size: 20px;
-    border-radius: 10px;
-    min-width: 300px;
-    margin: 0 auto;
     max-width: 400px;
   }
 }
