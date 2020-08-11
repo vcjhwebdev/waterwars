@@ -16,7 +16,7 @@ body {
 
 /* This makes the humans show above the aliens on tall displays */
 
-@media (max-aspect-ratio: 2/3) {
+@media (max-aspect-ratio: 3/4) {
   body {
     grid-template-columns: 1fr;
   }
