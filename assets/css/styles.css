@@ -1,263 +1,142 @@
-/* =================================
-DEFAULT STYLES (NO MEDIA QUERY)
-Device width:
-    320px -->   <-- 768px
-==================================== */
 body {
   background-image: url('../../img/wateersaand.jpg');
   font-family: 'Orbitron', sans-serif;
   margin: 0;
-  display: flex;
-  justify-content: space-evenly;
-  height: 100%
-  align-items: center;
-}
-body div {
-  flex: 1 0 50%
-}
-table {
-  width: 100%;
-  /* max-width: 425px; */
-  margin: 0 auto;
-  /* vertical-align: middle; */
-  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  font-size: min(calc(10px + 1.5vw), 25px);
 }
 
-td {
+/* This makes the humans show above the aliens on tall displays */
+
+@media (max-aspect-ratio: 3/4) {
+  body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* This makes the humans show above the aliens on narrow displays */
+
+@media (max-width: 480px) {
+  body {
+    grid-template-columns: 1fr;
+  }
+}
+
+body>div {
+  display: flex;
+  flex-direction: column;
+}
+
+body>div>* {
+  flex: 0 0 auto;
+}
+
+.grid {
+  flex: 1 1 auto;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  gap: 2px;
+  margin: 4px;
+}
+
+.grid>* {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid>button {
+  all: unset;
   border: 1px solid black;
   border-collapse: collapse;
   text-align: center;
   color: white;
 }
+
 body {
--webkit-user-select: none;
--webkit-tap-highlight-color: transparent;
--webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 /* modal */
+
 .modal {
   background-color: rgba(0, 153, 255, 0.5);
   text-align: center;
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .modal-content {
   border: 1px solid white;
   background-color: rgba(22, 97, 186, 1);
-  font-size: 1.1em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   width: 80%;
-  margin: 0 auto;
-  border-radius: 8px;;
+  border-radius: 8px;
   color: white;
-  margin-top: 1750px;
-  margin-bottom: 1750px;
+  max-width: 400px;
 }
 
-.fa-align-justify,
-.dead,
-.hit {
-  font-size: 20px;
-}
 .fa-align-justify {
   color: white;
 }
+
 .hit {
-  color:red;
-}
-  .miss{
-  color: #BFBEC7;
-}
-  .hitComputerShip {
   color: red;
 }
 
-.shipsLeft {
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 20px;
+.miss {
+  color: #BFBEC7;
 }
-.shipLength {
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 20px;
-}
-table .hidden {
-  border: 0;
-}
-.number th,
-.letter {
-  /* padding: 15px; */
+
+.grid>span {
   color: black;
-}
-
-.number th {
-  border: 3px solid black;
-  border-collapse: collapse;
-}
-
-.letter {
   border: 3px solid black;
   border-collapse: collapse;
   text-align: center;
 }
-p.humans {
+
+h2.humans, h2.aliens {
   text-align: center;
   font-family: 'Orbitron', sans-serif;
-  font-size: 25px;
-}
-p.aliens {
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 25px;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
 }
 
-button{
-  font-size: 20px;
+h3 {
+  font-size: 1em;
+  text-align: center;
+}
+
+.operator {
+  font-size: 1em;
   border-radius: 10px;
-  min-width: 500px;
-  margin: 0 auto;
+  margin: 1em;
+  color: white;
+  background-color: #70A7EE;
+  border-bottom: 8px #488DD9 solid;
+  border-top: 4px #3D7DE8 solid;
 }
-.button.operator {
-	color: white;
-	background-color: #70A7EE;
-	border-bottom: 8px #488DD9 solid;
-	border-top: 4px #3D7DE8 solid;
-}
+
 .operator:active {
-	border-bottom: 8px #3D7DE8 solid;
-	border-top: 4px #488DD9 solid;
+  border-bottom: 8px #3D7DE8 solid;
+  border-top: 4px #488DD9 solid;
 }
-  .computerShip {
+
+.computerShip {
   visibility: hidden;
-}
-/* =================================
-Device width:
-    <-- 320px
-==================================== */
-@media (max-width: 320px) {
-  table {
-    width: 100%;
-    height: 250px;
-    margin:0;
-  }
-  .fa-align-justify,
-  .dead,
-  .hit
-  .modal,
-  .modal-content{
-    font-size: 15px;
-  }
-  .modal-content {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 200px;
-  }
-  .modal {
-    text-align: center;
-  }
-  button{
-    font-size: 20px;
-    border-radius: 10px;
-    min-width: 150px;
-    margin: 0 auto;
-    max-width: 200px;
-  }
-}
-/* =================================
-Device width:
-    320px -->   <-- 768px
-==================================== */
-@media (min-width: 320px) {
-  table {
-    /*width: 80%;*/
-    height: 500px;
-  }
-    .fa-align-justify,
-    .dead,
-    .hit,
-    .modal,
-    .modal-content{
-      font-size: 20px;
-    }
-    .modal-content {
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-width: 400px;
-    }
-    .modal {
-      text-align: center;
-    }
-    button{
-      font-size: 20px;
-      border-radius: 10px;
-      min-width: 300px;
-      margin: 0 auto;
-      max-width: 400px;
-    }
-}
-/* =================================
-Device width:
-    768px -->   <-- 1024px
-==================================== */
-@media (min-width: 768px) {
-  table {
-    /*width: 80%;*/
-    height: 500px
-  }
-    .fa-align-justify,
-    .dead,
-    .hit,
-    .modal,
-    .modal-content{
-      font-size: 20px;
-    }
-    .modal-content {
-      justify-content: center;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      max-width: 400px;
-    }
-    .modal {
-      text-align: center;
-    }
-    button{
-      font-size: 20px;
-      border-radius: 10px;
-      min-width: 300px;
-      margin: 0 auto;
-      max-width: 400px;
-    }
-}
-/* =================================
-Device width:
-    1024px -->
-==================================== */
-@media (min-width: 1024px) {
-  table {
-    /*width: 60%;*/
-    height: 500px;
-  }
-  .fa-align-justify,
-  .dead,
-  .hit
-  .modal,
-  .modal-content{
-    font-size: 25px;
-  }
 }
