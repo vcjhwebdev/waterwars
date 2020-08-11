@@ -66,12 +66,13 @@ body {
   background-color: rgba(0, 153, 255, 0.5);
   text-align: center;
   position: fixed;
-  height: 100vh;
-  width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .modal-content {
@@ -83,12 +84,8 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: 80%;
-  margin: 0 auto;
   border-radius: 8px;
-  ;
   color: white;
-  margin-top: 1750px;
-  margin-bottom: 1750px;
 }
 
 .fa-align-justify, .dead, .hit {
